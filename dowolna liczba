@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int n, d, c = 0;
+cout << "number? ";
+cin >> n;
+cout << "digit? ";
+cin >> d;
+do { if (n % 10 == d) ++c; } while (n /= 10);
+cout << "result: " << c << endl;
+}
