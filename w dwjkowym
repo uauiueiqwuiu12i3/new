@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+int n;
+int ile=0;
+cout << "Podaj liczb";
+cin >> n;
+while(n>0)
+{
+   if(n%2==1)
+   {
+     ile++;
+   }
+     n=n/2;
+}
+cout << "liczba jedynek w dwjkowym: " << ile ;
+return 0;
+}
