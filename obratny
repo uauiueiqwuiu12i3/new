@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	int x;
+	cout << "Podaj liczb";
+	cin >> x;
+	while (x > 0) {
+		int o = x % 10;
+		cout << o;
+		x /= 10;
+	}
+	return 0;
+}
