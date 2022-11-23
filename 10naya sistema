@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+void BinDec(char* bin, int size)
+{
+    int rez(0), i;
+    std::cout<<"\n10liczba\n< ";
+    for(i = size - 1; i >= 0; --i)
+        rez += (bin[i] - 48)<<i;
+    std::cout<<rez<<std::endl;
+}
+char* DecBin(int chislo, int size)
+{
+    int i;
+    char* bin = new char[size];
+    std::cout<<"kod:\n< ";
+    for(i = size - 1; i >= 0; --i)
+    {
+        if(!((i + 1) % 8))
+            std::cout<<' ';
+        std::cout<<(bin[i] = ((chislo>>i)&1) + 48);
+    }
+    return bin;
+}
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int chislo, size(sizeof(chislo)*8);
+    std::cout<<"liczba\n> ";
+    std::cin>>chislo;
+    BinDec(DecBin(chislo, size), size);
+    system("pause");
+    return EXIT_SUCCESS;
+    getch();
+}
