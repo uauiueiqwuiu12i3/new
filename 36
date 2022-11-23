@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+    int n;
+    do {
+        cout << " ilosc n=";
+        cin >> n;
+    }while(n < 0 );
+    int v_s=0;
+    for(int k=1; k<=n; k++) {
+         v_s = v_s + 2*k-1;
+    }
+    cout<< v_s;
+    return 0;
+}
